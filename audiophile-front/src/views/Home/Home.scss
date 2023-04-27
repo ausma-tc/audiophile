@@ -1,0 +1,207 @@
+@import '../../index.scss';
+
+.home {
+  .hero-banner {
+    background-image: url('../../assets/medias/home/desktop/image-hero.jpg');
+    color: #fff;
+    min-height: 729px;
+    display: flex;
+    padding: 0 165px;
+    margin-bottom: 180px;
+
+    .text-hero-banner {
+      width: 100%;
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        margin: 24px 0;
+      }
+      .overline {
+        color: $white;
+      }
+      .description {
+        margin-bottom: 40px;
+      }
+      .btn {
+        max-width: fit-content;
+      }
+    }
+  }
+  .categories-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+    margin-bottom: 168px;
+    padding: 0 165px;
+    align-items: end;
+
+    .category-content {
+        &:first-child {
+          grid-area: 1 / 1 / 2 / 2; 
+        }
+        &:last-child {
+          grid-area: 1 / 3 / 2 / 4;
+        }
+      }
+  }
+  .features-section {
+    padding: 0 165px;
+    margin-bottom: $margin-content;
+    .main-product-content {
+      background-color: $primary-color;
+      color: $white;
+      display: flex;
+      border-radius: $border-radius;
+      min-height: 560px;
+      position: relative;
+      margin-bottom: $margin;
+
+      &::after {
+        content: url(../../assets/medias//home/desktop/pattern-circles.svg);
+        position: absolute;
+        z-index: 0;
+        left: -175px;
+        top: -35px;
+      }
+
+      .col-left, .col-right {
+        width: 100%;
+        min-width: 50%;
+        z-index: 1;
+      }
+      .col-left {
+        position: relative;
+        overflow: hidden;
+        img {
+          max-height: 80%;
+          position: absolute;
+          bottom: -15px;
+          right: 25px;
+        }
+      }
+      .col-right {
+        padding-right: 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        >.content-right {
+          max-width: 350px;
+        }
+
+        h3 {
+          margin: 0;
+          margin-bottom: 24px;
+        }
+
+        .description {
+          margin-bottom: 40px;
+        }
+
+        .btn {
+          width: fit-content;
+        }
+      }
+    }
+    .second-product-content {
+      background: url(../../assets/medias/home/desktop/image-speaker-zx7.jpg);
+      display: flex;
+      border-radius: $border-radius;
+      min-height: 320px;
+      position: relative;
+      margin-bottom: $margin;
+
+      .content-left {
+        padding-left: 95px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        >.content-left {
+          max-width: 350px;
+        }
+        h3 {
+          margin: 0;
+          margin-bottom: 24px;
+        }
+        .btn {
+          width: fit-content;
+        }
+      }
+    }
+    .third-product-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 30px;
+      grid-row-gap: 0px;
+      border-radius: $border-radius;
+
+      .image-container {
+        grid-area: 1 / 1 / 2 / 2;
+        border-radius: $border-radius;
+        overflow: hidden;
+        display: flex;
+      }
+      .text-container {
+        grid-area: 1 / 2 / 2 / 3;
+        background-color: $grey;
+        border-radius: $border-radius;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 95px;
+
+        h3 {
+          margin-top: 0;
+          margin-bottom: 24px;
+        }
+        .btn {
+          width: fit-content;
+        }
+      }
+    }
+  }
+  .about-section {
+    padding: 0 165px;
+    margin-bottom: $margin-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+    border-radius: $border-radius;
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h2 {
+        margin-bottom: $padding;
+        &>.text-color {
+          font-size: 40px;
+          line-height: 44px;
+          letter-spacing: 1.5px;
+          font-weight: 700;
+          color: $primary-color;
+        }
+      }
+      .description {
+        max-width: 445px;
+        opacity: .5;
+      }
+    }
+    .image-container {
+      border-radius: $border-radius;
+      overflow: hidden;
+      display: flex;
+    }
+  }
+}

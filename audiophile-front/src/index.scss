@@ -1,0 +1,118 @@
+// Imports 
+@import '../src/assets/scss/01_global/reset';
+@import '../src/assets/scss/01_global/mixins';
+@import '../src/assets/scss/01_global/variables';
+
+:root {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: $black;
+  background-color: $white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// Fonts
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+h1,
+.h1 {
+  font-size: 56px;
+  line-height: 58px;
+  letter-spacing: 2px;
+}
+h2,
+.h2 {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+}
+h3,
+.h3 {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.15px;
+}
+h4,
+.h4 {
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 2px;
+}
+h5,
+.h5 {
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 1.7px;
+}
+h6,
+.h6 {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+}
+.overline {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 10px;
+  color: $primary-color;
+}
+.subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  color: $primary-color;
+}
+p,
+a,
+span {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+// Buttons
+.btn {
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+img {
+  max-width: 100%;
+}

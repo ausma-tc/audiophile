@@ -1,0 +1,108 @@
+@import "../../index.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  color: #fff;
+  height: 96px;
+  padding: 0 165px;
+  position: absolute;
+  width: 100%;
+  max-width: 1100px;
+
+  &::after {
+    content: '';
+    width: 100%;
+    max-width: 1100px;
+    height: 1px;
+    background-color: $white;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .navbar-logo, .cart {
+    a {
+      display: flex;
+    }
+  }
+
+  .navbar-links {
+    list-style: none;
+    display: flex;
+
+    li {
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      line-height: 25px;
+      transition: color .25s ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .navbar-burger {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+
+    > .navbar-links {
+      display: none;
+    }
+  }
+
+  .navbar-logo {
+    margin-bottom: 20px;
+  }
+
+  .navbar-burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar-menu {
+    padding: 10px;
+
+    .navbar-links {
+      display: block;
+      padding: 0;
+      li {
+        margin-right: 0;
+        a {
+          margin-bottom: 10px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    &.active {
+      display: block;
+      text-align: center;
+    }
+  }
+}

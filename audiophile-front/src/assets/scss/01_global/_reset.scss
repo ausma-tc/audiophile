@@ -1,0 +1,187 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.btn {
+	cursor: pointer;
+}
+.card {
+	background: none;
+}
+button:focus{
+ 	outline:auto;
+}
+.was-validated .form-control:valid:focus,.form-control.is-valid:focus{
+ 	box-shadow:none;
+}
+.was-validated .custom-select:valid:focus,.custom-select.is-valid:focus{
+ 	box-shadow:none;
+}
+.was-validated .custom-control-input:valid:focus~.custom-control-label::before,.custom-control-input.is-valid:focus~.custom-control-label::before{
+ 	box-shadow:none;
+}
+.was-validated .custom-file-input:valid:focus~.custom-file-label,.custom-file-input.is-valid:focus~.custom-file-label{
+ 	box-shadow:none;
+}
+.was-validated .form-control:invalid:focus,.form-control.is-invalid:focus{
+ 	box-shadow:none;
+}
+.was-validated .custom-select:invalid:focus,.custom-select.is-invalid:focus{
+ 	box-shadow:none;
+}
+.was-validated .custom-control-input:invalid:focus~.custom-control-label::before,.custom-control-input.is-invalid:focus~.custom-control-label::before{
+ 	box-shadow:none;
+}
+.was-validated .custom-file-input:invalid:focus~.custom-file-label,.custom-file-input.is-invalid:focus~.custom-file-label{
+ 	box-shadow:none;
+}
+.btn-primary:focus,.btn-primary.focus{
+ 	box-shadow:none;
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus,.btn-primary:not(:disabled):not(.disabled).active:focus,.show>.btn-primary.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-secondary:focus,.btn-secondary.focus{
+ 	box-shadow:none;
+}
+.btn-secondary:not(:disabled):not(.disabled):active:focus,.btn-secondary:not(:disabled):not(.disabled).active:focus,.show>.btn-secondary.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-success:focus,.btn-success.focus{
+ 	box-shadow:none;
+}
+.btn-success:not(:disabled):not(.disabled):active:focus,.btn-success:not(:disabled):not(.disabled).active:focus,.show>.btn-success.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-info:focus,.btn-info.focus{
+ 	box-shadow:none;
+}
+.btn-info:not(:disabled):not(.disabled):active:focus,.btn-info:not(:disabled):not(.disabled).active:focus,.show>.btn-info.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-warning:focus,.btn-warning.focus{
+ 	box-shadow:none;
+}
+.btn-warning:not(:disabled):not(.disabled):active:focus,.btn-warning:not(:disabled):not(.disabled).active:focus,.show>.btn-warning.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-danger:focus,.btn-danger.focus{
+ 	box-shadow:none;
+}
+.btn-danger:not(:disabled):not(.disabled):active:focus,.btn-danger:not(:disabled):not(.disabled).active:focus,.show>.btn-danger.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-light:focus,.btn-light.focus{
+ 	box-shadow:none;
+}
+.btn-light:not(:disabled):not(.disabled):active:focus,.btn-light:not(:disabled):not(.disabled).active:focus,.show>.btn-light.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-dark:focus,.btn-dark.focus{
+ 	box-shadow:none;
+}
+.btn-dark:not(:disabled):not(.disabled):active:focus,.btn-dark:not(:disabled):not(.disabled).active:focus,.show>.btn-dark.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-outline-primary:focus,.btn-outline-primary.focus{
+ 	box-shadow:none;
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,.btn-outline-primary:not(:disabled):not(.disabled).active:focus,.show>.btn-outline-primary.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-outline-secondary:focus,.btn-outline-secondary.focus{
+ 	box-shadow:none;
+}
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus,.btn-outline-secondary:not(:disabled):not(.disabled).active:focus,.show>.btn-outline-secondary.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-outline-success:focus,.btn-outline-success.focus{
+ 	box-shadow:none;
+}
+.btn-outline-success:not(:disabled):not(.disabled):active:focus,.btn-outline-success:not(:disabled):not(.disabled).active:focus,.show>.btn-outline-success.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-outline-info:focus,.btn-outline-info.focus{
+ 	box-shadow:none;
+}
+.btn-outline-info:not(:disabled):not(.disabled):active:focus,.btn-outline-info:not(:disabled):not(.disabled).active:focus,.show>.btn-outline-info.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-outline-warning:focus,.btn-outline-warning.focus{
+ 	box-shadow:none;
+}
+.btn-outline-warning:not(:disabled):not(.disabled):active:focus,.btn-outline-warning:not(:disabled):not(.disabled).active:focus,.show>.btn-outline-warning.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-outline-danger:focus,.btn-outline-danger.focus{
+ 	box-shadow:none;
+}
+.btn-outline-danger:not(:disabled):not(.disabled):active:focus,.btn-outline-danger:not(:disabled):not(.disabled).active:focus,.show>.btn-outline-danger.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-outline-light:focus,.btn-outline-light.focus{
+ 	box-shadow:none;
+}
+.btn-outline-light:not(:disabled):not(.disabled):active:focus,.btn-outline-light:not(:disabled):not(.disabled).active:focus,.show>.btn-outline-light.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.btn-outline-dark:focus,.btn-outline-dark.focus{
+ 	box-shadow:none;
+}
+.btn-outline-dark:not(:disabled):not(.disabled):active:focus,.btn-outline-dark:not(:disabled):not(.disabled).active:focus,.show>.btn-outline-dark.dropdown-toggle:focus{
+ 	box-shadow:none;
+}
+.custom-control-input:focus~.custom-control-label::before{
+ 	box-shadow:none;
+}
+.custom-file-input:focus~.custom-file-label{
+ 	outline:auto;
+}
+.custom-range:focus::-webkit-slider-thumb{
+ 	box-shadow:none;
+}
+.custom-range:focus::-moz-range-thumb{
+ 	box-shadow:none;
+}
+.custom-range:focus::-ms-thumb{
+ 	box-shadow:none;
+}
+
+[tabindex="-1"]:focus {
+	outline: auto !important;
+}

@@ -1,0 +1,48 @@
+@import '../../index.scss';
+
+.card {
+  display: flex;
+  margin-bottom: 160px;
+
+  .image, .content {
+    max-width: 50%;
+  }
+
+  .image {
+    border-radius: $border-radius;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .content {
+    margin-left: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    .overline {
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h2 {
+      margin-bottom: 32px;
+    }
+    .description {
+      margin-bottom: 40px;
+    }
+
+    .btn-primary {
+      width: fit-content;
+    }
+  }
+
+  &:nth-child(2) {
+    .image {
+      order: 2;
+    }
+    .content {
+      margin-left: 0;
+      margin-right: 125px;
+    }
+
+  }
+}
