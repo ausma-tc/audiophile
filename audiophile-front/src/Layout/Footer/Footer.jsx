@@ -7,7 +7,7 @@ import FacebookIcon from "../../assets/medias/icon-facebook.svg";
 import TwitterIcon from "../../assets/medias/icon-twitter.svg";
 import InstagramIcon from "../../assets/medias/icon-instagram.svg";
 
-import "./footer.scss";
+import "./Footer.scss";
 
 export default function Footer() {
   return (

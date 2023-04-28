@@ -1,5 +1,9 @@
 @import "../../index.scss";
-
+.home {
+  &>.navbar {
+    background-color: transparent;
+  }
+}
 .navbar {
   display: flex;
   justify-content: space-between;

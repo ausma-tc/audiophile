@@ -11,13 +11,13 @@ export default function LinkComponent(props) {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="4"
+          strokeWidth="4"
           stroke="currentColor"
-          class="w-6 h-6"
+          className="w-6 h-6"
         >
           <path
-            stroke-linecap="square"
-            stroke-linejoin="square"
+            strokeLinecap="square"
+            strokeLinejoin="square"
             d="M8.25 4.5l7.5 7.5-7.5 7.5"
           />
         </svg>

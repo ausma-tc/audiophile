@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import CategoryItem from "../../components/Category-item/Category-item";
 import Button from "../../components/Button/Button";
+import ReactMarkdown from "react-markdown";
 
 // Medias
 import ImgHeadphonesCategory from "../../assets/medias/home/image-headphones.png";
@@ -15,8 +16,7 @@ import "./ProductDetail.scss";
 function Detail({ element }) {
   const id = useParams().id;
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
-  // console.log(data?.attributes?.Galeries);
-  console.log();
+  console.log(data);
 
   // Back to precedent page
   const navigate = useNavigate();
@@ -33,6 +33,23 @@ function Detail({ element }) {
     quantity > 0 ? setQuantity(quantity - 1) : null;
   };
 
+  // Add span around li section "features"
+  const spanningInTheBox = () => {
+    const li = document.querySelectorAll(".col-in-the-box ul li");
+    if (li) {
+      li.forEach((li) => {
+        const text = li.textContent;
+        const span = document.createElement("span");
+        span.textContent = text.substring(0, 2);
+        li.innerHTML = `<span class='nbr-tools'>${text.substring(
+          0,
+          2
+        )}</span><span class='tools'>${text.substring(2)}</span>`;
+      });
+    }
+  };
+  spanningInTheBox();
+
   return (
     <div className="detail">
       {loading ? (
@@ -40,7 +57,7 @@ function Detail({ element }) {
       ) : (
         <>
           <button onClick={goBack} className="btn btn-goBack">
-            Back
+            Go back
           </button>
 
           <div className="card">
@@ -63,38 +80,20 @@ function Detail({ element }) {
               <p className="price">${data?.attributes?.Price}</p>
               <div className="wrapper-add-to-cart">
                 <div className="quantity-box">
-                  <button onClick={decremCount}>
-                    <svg
-                      width="12"
-                      height="4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlnsXlink="http://www.w3.org/1999/xlink"
-                    >
-                      <defs>
-                        <path
-                          d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
-                          id="a"
-                        />
-                      </defs>
-                      <use fill="#FF7E1B" fillRule="nonzero" xlinkHref="#a" />
-                    </svg>
+                  <button
+                    onClick={() =>
+                      setQuantity((prev) => (prev === 1 ? 1 : prev - 1))
+                    }
+                    className="btn-quantity"
+                  >
+                    -
                   </button>
-                  <p>{quantity}</p>
-                  <button onClick={incremCount}>
-                    <svg
-                      width="12"
-                      height="12"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlnsXlink="http://www.w3.org/1999/xlink"
-                    >
-                      <defs>
-                        <path
-                          d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
-                          id="b"
-                        />
-                      </defs>
-                      <use fill="#FF7E1B" fillRule="nonzero" xlinkHref="#b" />
-                    </svg>
+                  <span>{quantity}</span>
+                  <button
+                    onClick={() => setQuantity((prev) => prev + 1)}
+                    className="btn-quantity"
+                  >
+                    +
                   </button>
                 </div>
                 <Button
@@ -109,11 +108,14 @@ function Detail({ element }) {
           <section className="features">
             <div className="col-features">
               <h3>Features</h3>
-              <p className="description">{data?.attributes?.Features}</p>
+              <ReactMarkdown
+                className="description"
+                children={data?.attributes?.Features}
+              />
             </div>
             <div className="col-in-the-box">
               <h3>In the box</h3>
-              <p>{data?.attributes?.Box}</p>
+              <ReactMarkdown children={data?.attributes?.Box} />
             </div>
           </section>
 
@@ -162,11 +164,13 @@ function Detail({ element }) {
           </section>
 
           <section className="related-products">
-            <h2>You may also like</h2>
+            <h3>You may also like</h3>
             <div className="wrapper-card">
               <div className="card-product">
-                <div className="image">{/* <img src="" alt="" /> */}</div>
-                <h3>XX 99 MARK I</h3>
+                <div className="image">
+                  <img src={ImgHeadphonesCategory} alt="" />
+                </div>
+                <h4>XX 99 MARK I</h4>
                 <Button
                   className="primary"
                   link={`/headphones/${data.id}`}
@@ -174,8 +178,10 @@ function Detail({ element }) {
                 />
               </div>
               <div className="card-product">
-                <div className="image">{/* <img src="" alt="" /> */}</div>
-                <h3>XX59</h3>
+                <div className="image">
+                  <img src={ImgSpeakersCategory} alt="" />
+                </div>
+                <h4>XX59</h4>
                 <Button
                   className="primary"
                   link={`/headphones/${data.id}`}
@@ -183,8 +189,10 @@ function Detail({ element }) {
                 />
               </div>
               <div className="card-product">
-                <div className="image">{/* <img src="" alt="" /> */}</div>
-                <h3>ZX9 SPEAKER</h3>
+                <div className="image">
+                  <img src={ImgEarphonesCategory} alt="" />
+                </div>
+                <h4>ZX9 SPEAKER</h4>
                 <Button
                   className="primary"
                   link={`/headphones/${data.id}`}

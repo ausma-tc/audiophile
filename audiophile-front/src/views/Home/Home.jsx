@@ -15,7 +15,7 @@ import "./Home.scss";
 
 export default function Home() {
   return (
-    <div className="home">
+    <>
       <section className="hero-banner">
         <div className="text-hero-banner">
           <h2 className="overline">New product</h2>
@@ -107,6 +107,6 @@ export default function Home() {
           <img src={ImgAboutSection} alt="Man listen some music" />
         </div>
       </section>
-    </div>
+    </>
   );
 }
