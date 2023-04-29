@@ -4,6 +4,8 @@ import useFetch from "../../hooks/useFetch";
 import CategoryItem from "../../components/Category-item/Category-item";
 import Button from "../../components/Button/Button";
 import ReactMarkdown from "react-markdown";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartReducer";
 
 // Medias
 import ImgHeadphonesCategory from "../../assets/medias/home/image-headphones.png";
@@ -32,6 +34,8 @@ function Detail({ element }) {
   const decremCount = () => {
     quantity > 0 ? setQuantity(quantity - 1) : null;
   };
+
+  const dispatch = useDispatch();
 
   // Add span around li section "features"
   const spanningInTheBox = () => {
@@ -98,9 +102,37 @@ function Detail({ element }) {
                 </div>
                 <Button
                   className="primary"
-                  link={`/headphones/${data.id}`}
+                  onClick={() =>
+                    dispatch(
+                      addToCart({
+                        id: data.id,
+                        title: data.attributes.Title,
+                        desc: data.attributes.Description,
+                        price: data.attributes.Price,
+                        img: data.attributes.Image.data.attributes.url,
+                        quantity,
+                      })
+                    )
+                  }
                   text="Add to cart"
                 />
+                <button
+                  className="btn btn-primary"
+                  onClick={() =>
+                    dispatch(
+                      addToCart({
+                        id: data.id,
+                        title: data.attributes.Title,
+                        desc: data.attributes.Description,
+                        price: data.attributes.Price,
+                        img: data.attributes.Image.data.attributes.url,
+                        quantity,
+                      })
+                    )
+                  }
+                >
+                  Add to cart
+                </button>
               </div>
             </div>
           </div>

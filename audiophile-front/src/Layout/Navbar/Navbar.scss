@@ -14,7 +14,7 @@
   padding: 0 165px;
   position: absolute;
   width: 100%;
-  max-width: 1100px;
+  max-width: 50%;
 
   &::after {
     content: '';
@@ -108,5 +108,24 @@
       display: block;
       text-align: center;
     }
+  }
+}
+
+.cartIcon {
+  position: relative;
+
+  span {
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2879fe;
+    color: white;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
