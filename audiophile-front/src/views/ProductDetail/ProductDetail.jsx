@@ -100,22 +100,6 @@ function Detail({ element }) {
                     +
                   </button>
                 </div>
-                <Button
-                  className="primary"
-                  onClick={() =>
-                    dispatch(
-                      addToCart({
-                        id: data.id,
-                        title: data.attributes.Title,
-                        desc: data.attributes.Description,
-                        price: data.attributes.Price,
-                        img: data.attributes.Image.data.attributes.url,
-                        quantity,
-                      })
-                    )
-                  }
-                  text="Add to cart"
-                />
                 <button
                   className="btn btn-primary"
                   onClick={() =>

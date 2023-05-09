@@ -10,8 +10,25 @@ import ImgAboutSection from "../../assets/medias/home/desktop/image-best-gear.jp
 import './Headphones.scss';
 
 function Headphones({ category }) {
+  const urlActuelle = window.location.pathname;
+  let pageId = "";
+
+  switch (urlActuelle) {
+    case "/headphones":
+      pageId = 1;
+      break;
+    case "/earphones":
+      pageId = 2;
+      break;
+    case "/speakers":
+      pageId = 3;
+      break;
+      default:
+      console.log("No id");
+  }
+  
   const { data, loading, error } = useFetch(
-    `/products?filters[categories][id][$eq]=1&populate=*`
+    `/products?filters[categories][id][$eq]=${pageId}&populate=*`
   );
   return (
     <div className="list-products">

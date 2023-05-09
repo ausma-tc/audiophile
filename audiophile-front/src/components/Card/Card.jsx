@@ -5,6 +5,24 @@ import { Link } from "react-router-dom";
 
 const Card = ({ item }) => {
   console.log(item);
+
+  const urlActuelle = window.location.pathname;
+  let urlPath = "";
+
+  switch (urlActuelle) {
+    case "/headphones":
+      urlPath = "headphones";
+      break;
+    case "/earphones":
+      urlPath = "earphones";
+      break;
+    case "/speakers":
+      urlPath = "speakers";
+      break;
+      default:
+      console.log("No id");
+  }
+
   return (
     <div className="card">
       <div className="image">
@@ -18,11 +36,11 @@ const Card = ({ item }) => {
         />
       </div>
       <div className="content">
-        {item?.attributes.isNew && <span class="overline">New product</span>}
+        {item?.attributes.isNew && <span className="overline">New product</span>}
         <h2>{item?.attributes.Title}</h2>
         <p className="description">{item?.attributes.Description}</p>
         <div className="prices">{/* <h3>${item?.attributes.price}</h3> */}</div>
-        <Button className="primary" link={`/headphones/${item.id}`} text="See product" />
+        <Button className="primary" link={`/${urlPath}/${item.id}`} text="See product" />
       </div>
     </div>
   );
